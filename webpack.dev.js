@@ -9,9 +9,8 @@ module.exports = merge(common(), {
   target: 'web',
   devtool: 'inline-source-map',
   devServer: {
-    publicPath: '/',
-    contentBase: path.join(__dirname, 'dist'),
-    hot: true // hot reload
+    static: path.join(__dirname, 'dist'),
+    hot: true, // hot reload
   },
   plugins: [
     new HtmlWebpackPlugin({
